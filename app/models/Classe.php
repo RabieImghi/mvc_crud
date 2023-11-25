@@ -11,5 +11,11 @@ class Classe{
         $sql = "INSERT INTO classes SET ClassName='$classename', ClasseLevel='$level'";
         return $conn->query($sql);
     }
+    public static function UpdateClasses(){
+        $conn = Connect::connecte();
+        extract($_POST);
+        $sql = "UPDATE classes SET ClassName='$classename', ClasseLevel='$level' WHERE ClassID = $idClass";
+        return $conn->query($sql);
+    }
     
 }

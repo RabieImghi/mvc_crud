@@ -54,11 +54,11 @@ ob_start();
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Level</label>
-                                        <input type="email" name='email' value='<?=$Clsse["ClasseLevel"]?>' class="form-control" id="exampleInputEmail1" >
+                                        <input type="text" name='level' value='<?=$Clsse["ClasseLevel"]?>' class="form-control" id="exampleInputEmail1" >
                                     </div>
-                                    <input type="hidden" name='idUser' value='<?=$Clsse["ClassID"]?>'>
+                                    <input type="hidden" name='idClass' value='<?=$Clsse["ClassID"]?>'>
                                     <input type="hidden" name="action" value='updateClass'>
-                                    <button type="submit" name='submit' class="btn btn-primary">Update User</button>
+                                    <button type="submit" name='submit' class="btn btn-primary">Update Class</button>
                                 </form>
                             </div>
                         </div>

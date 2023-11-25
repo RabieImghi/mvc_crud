@@ -14,6 +14,7 @@
             case "addUser" : userController::InserUserActoion(); break;
             case "updateUser" : userController::UpdateUserActoion(); break;
             case "addClass" : classController::InserClassActoion(); break;
+            case "updateClass" : classController::UpdateClassActoion(); break;
         }
     }else{
         userController::listUserActoion();

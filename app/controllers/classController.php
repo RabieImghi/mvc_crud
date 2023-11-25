@@ -9,4 +9,8 @@ class classController{
         $res=Classe::InserClasses();
         if($res) header("location: index.php?action=classe");
     }
+    public static function UpdateClassActoion(){
+        $res=Classe::UpdateClasses();
+        if($res) header("location: index.php?action=classe");
+    }
 }
