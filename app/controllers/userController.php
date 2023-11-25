@@ -3,6 +3,7 @@ class userController{
     public static function listUserActoion(){
         $title_page ="HOME";
         $listUser = User::ListUsers();
+        $listClass = Classe::ListClasses();
         include_once "app/views/UsersVue.php";
     }
     public static function InserUserActoion(){

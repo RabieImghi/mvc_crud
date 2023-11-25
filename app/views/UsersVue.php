@@ -20,6 +20,18 @@ ob_start();
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" name='password' class="form-control" id="exampleInputPassword1">
                     </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Class</label>
+                        <select name="IdClass" class="form-control" id="exampleInputPassword1">
+                        <?php 
+                        $classes=[];
+                        while($class = $listClass->fetch_assoc()){
+                        $classes[]=[$class["ClassID"],$class["ClassName"]];
+                        ?>
+                        <option value="<?=$class["ClassID"]?>"><?=$class["ClassName"]?></option>
+                        <?php } ?>
+                        </select>
+                    </div>
                     <input type="hidden" name="action" value='addUser'>
                     <button type="submit" name='submit' class="btn btn-primary">Add User</button>
                 </form>
@@ -33,6 +45,7 @@ ob_start();
             <th scope="col">Id</th>
             <th scope="col">Username</th>
             <th scope="col">Email</th>
+            <th scope="col">Classe</th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -44,6 +57,7 @@ ob_start();
         <th scope="row"><?=$User["UserID"]?></th>
         <td><?=$User["userame"]?></td>
         <td><?=$User["email"]?></td>
+        <td><?=$User["ClassName"]?></td>
         <td class='d-flex gap-3'>
             <div class="divv">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$User["UserID"]?>">  Update </button>
@@ -59,6 +73,16 @@ ob_start();
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label">Email</label>
                                         <input type="email" name='email' value='<?=$User["email"]?>' class="form-control" id="exampleInputEmail1" >
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Class</label>
+                                        <select name="IdClass" class="form-control" id="exampleInputPassword1">
+                                        <?php 
+                                        foreach($classes as $classe){
+                                        ?>
+                                        <option value="<?=$classe[0]?>" <?php if($classe[0]==$User["ClassID"]) echo "selected" ?>><?=$classe[1]?></option>
+                                        <?php } ?>
+                                        </select>
                                     </div>
                                     <input type="hidden" name='idUser' value='<?=$User["UserID"]?>'>
                                     <input type="hidden" name="action" value='updateUser'>
