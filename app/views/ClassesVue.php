@@ -14,7 +14,7 @@ ob_start();
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Level</label>
-                        <input type="email" name='level' class="form-control" id="exampleInputEmail1" >
+                        <input type="text" name='level' class="form-control" id="exampleInputEmail1" >
                     </div>
                     <input type="hidden" name="action" value='addClass'>
                     <button type="submit" name='submit' class="btn btn-primary">Add Class</button>

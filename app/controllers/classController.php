@@ -6,7 +6,7 @@ class classController{
         include_once "app/views/ClassesVue.php";
     }
     public static function InserClassActoion(){
-        $listClasse = Classe::InserClasses();
-        include_once "app/views/ClassesVue.php";
+        $res=Classe::InserClasses();
+        if($res) header("location: index.php?action=classe");
     }
 }
