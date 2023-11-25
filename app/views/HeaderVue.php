@@ -19,7 +19,7 @@
             <a class="nav-link active" aria-current="page" href="index.php?action=list">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php?action=page">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php?action=classe">Classe</a>
           </li>
         </ul>
         <form class="d-flex" role="search">

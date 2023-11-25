@@ -4,7 +4,7 @@
         $action = $_GET["action"];
         switch($action){
             case "list": userController::listUserActoion(); break;
-            case "page": echo 'ok';break;
+            case "classe": classController::listClasseActoion();break;
         }
     }else
     if(isset($_POST["submit"])){
@@ -13,6 +13,7 @@
             case "deletUser" : userController::DeletUserActoion(); break;
             case "addUser" : userController::InserUserActoion(); break;
             case "updateUser" : userController::UpdateUserActoion(); break;
+            case "addClass" : classController::InserClassActoion(); break;
         }
     }else{
         userController::listUserActoion();
