@@ -7,7 +7,7 @@ ob_start();
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form action="insertUser.php">
+                <form action="insertUser.php" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail" class="form-label">username</label>
                         <input type="text" name='username' class="form-control" id="exampleInputEmail" >
