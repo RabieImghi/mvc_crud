@@ -7,7 +7,7 @@ ob_start();
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form action="insertUser.php" method="post">
+                <form action="Insert.php" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail" class="form-label">username</label>
                         <input type="text" name='username' class="form-control" id="exampleInputEmail" >
@@ -20,7 +20,7 @@ ob_start();
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" name='password' class="form-control" id="exampleInputPassword1">
                     </div>
-                    <button type="submit" class="btn btn-primary">Add User</button>
+                    <button type="submit" name='InsertUser' class="btn btn-primary">Add User</button>
                 </form>
             </div>
         </div>
@@ -50,7 +50,7 @@ ob_start();
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <form action="updateUser.php" method="post">
+                                <form action="Update.php" method="post">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail" class="form-label">username</label>
                                         <input type="text" value='<?=$User["userame"]?>' name='username' class="form-control" id="exampleInputEmail" >
@@ -60,16 +60,16 @@ ob_start();
                                         <input type="email" name='email' value='<?=$User["email"]?>' class="form-control" id="exampleInputEmail1" >
                                     </div>
                                     <input type="hidden" name='idUser' value='<?=$User["UserID"]?>'>
-                                    <button type="submit" class="btn btn-primary">Update User</button>
+                                    <button type="submit" name='UpdateUser' class="btn btn-primary">Update User</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div> 
             </div>
-            <form action="deletUser.php" method='post'>
+            <form action="Delet.php" method='post'>
                 <input type="hidden" name='idUser' value='<?=$User["UserID"]?>'>
-                <button type="submit" class="btn btn-primary">Delet User</button>
+                <button type="submit" name='deletUser' class="btn btn-primary">Delet User</button>
             </form>
         </td>
     </tr>
