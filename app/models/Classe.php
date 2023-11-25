@@ -17,5 +17,11 @@ class Classe{
         $sql = "UPDATE classes SET ClassName='$classename', ClasseLevel='$level' WHERE ClassID = $idClass";
         return $conn->query($sql);
     }
+    public static function DeletClasses(){
+        $conn = Connect::connecte();
+        extract($_POST);
+        $sql = "DELETE FROM classes WHERE ClassID = $idClass";
+        return $conn->query($sql);
+    }
     
 }

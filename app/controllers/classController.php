@@ -13,4 +13,8 @@ class classController{
         $res=Classe::UpdateClasses();
         if($res) header("location: index.php?action=classe");
     }
+    public static function DeletClassActoion(){
+        $res=Classe::DeletClasses();
+        if($res) header("location: index.php?action=classe");
+    }
 }
