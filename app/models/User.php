@@ -17,5 +17,11 @@ class User{
         $sql = "UPDATE users SET userame='$username', email='$email' WHERE UserID='$idUser'";
         return $conn->query($sql);
     }
+    public static function DeletUser(){
+        $conn = Connect::connecte();
+        extract($_POST);
+        $sql = "DELETE FROM users  WHERE UserID='$idUser'";
+        return $conn->query($sql);
+    }
     
 }

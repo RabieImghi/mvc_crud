@@ -13,5 +13,9 @@ class userController{
         $res=User::UpdateUser();
         if($res) header("location: index.php");
     }
+    public static function DeletUserActoion(){
+        $res=User::DeletUser();
+        if($res) header("location: index.php");
+    }
     
 }
