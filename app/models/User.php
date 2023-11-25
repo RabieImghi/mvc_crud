@@ -11,4 +11,11 @@ class User{
         $sql = "INSERT INTO users SET userame='$username', email='$email', password='$password'";
         return $conn->query($sql);
     }
+    public static function UpdateUser(){
+        $conn = Connect::connecte();
+        extract($_POST);
+        $sql = "UPDATE users SET userame='$username', email='$email' WHERE UserID='$idUser'";
+        return $conn->query($sql);
+    }
+    
 }

@@ -11,3 +11,4 @@ class Autoloader {
         });
     }
 }
+Autoloader::register();

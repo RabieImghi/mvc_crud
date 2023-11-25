@@ -9,4 +9,9 @@ class userController{
         $res=User::InserUser();
         if($res) header("location: index.php");
     }
+    public static function UpdateUserActoion(){
+        $res=User::UpdateUser();
+        if($res) header("location: index.php");
+    }
+    
 }
